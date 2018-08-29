@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>基于meiziui的仿微信pc端</title>
+    <title>chat</title>
+    <link rel="shortcut icon" href="<?php echo HTTP_ROOT_PATH;?>/favicon.ico" />
     <link rel="stylesheet" href="<?php echo APP_HTTP_ROOT.$this->GetThemes();?>/assets/js/amazeui/amazeui.min.css" />
     <link rel="stylesheet" href="<?php echo APP_HTTP_ROOT.$this->GetThemes();?>/assets/css/main.css" />
     <script>
@@ -19,7 +20,7 @@
                 <div class="wx_search">
                     <img class="own_img" style="width: 25px;height: 25px; float: left;">
                     <input id="search" type="text" placeholder="搜索" />
-                    <button>+</button>
+                    <button id="logout_btn">-</button>
                 </div>
                 <div class="office_text">
                     <ul class="friends_list" id="mim_user_firends_list">
@@ -42,7 +43,8 @@
             MIM.TokenLogin("<?php echo $_SESSION['mim'];?>");
         }
         MIM.Run('192.168.1.111', '2347');
-        $(".mim_user_logout").click(function() {
+        $("#logout_btn").click(function() {
+            $.post(_REQUEST_HOST+"/Login/logout");
             MIM.Logout();
         });
     }

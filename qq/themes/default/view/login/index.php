@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>chat登录</title>
+	<link rel="shortcut icon" href="<?php echo HTTP_ROOT_PATH;?>/favicon.ico" />
 	<link href="<?php echo APP_HTTP_ROOT.$this->GetThemes();?>/assets/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <script>
