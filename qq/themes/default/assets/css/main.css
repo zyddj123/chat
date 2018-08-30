@@ -383,6 +383,7 @@ ul.am-dropdown-content>li>a:hover {
 }
 
 .office_text {
+    overflow: auto;
     width: 100%;
     height: calc(100% - 62px);
     position: relative;
